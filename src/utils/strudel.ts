@@ -1,15 +1,8 @@
 // Utility that imports from @strudel packages
-import { silence, evalScope } from '@strudel/core';
-import { getAudioContext, webaudioOutput } from '@strudel/webaudio';
+import { silence } from '@strudel/core';
 
-// NO re-exports - only wrapper functions
-export function createStrudel() {
+export function useStrudel() {
   const pattern = silence;
-  const ctx = getAudioContext();
-  return { pattern, ctx };
-}
-
-export function getStrudelAudioContext() {
-  return getAudioContext();
+  return { pattern };
 }
 
