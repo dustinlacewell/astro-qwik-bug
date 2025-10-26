@@ -11,7 +11,7 @@
   "dependencies": {
     "astro": "^5.15.1",
     "@qwikdev/astro": "^0.8.2",
-    "@builder.io/qwik": "1.16.0",
+    "@builder.io/qwik": "https://pkg.pr.new/@builder.io/qwik@2ee90e3",
     "@strudel/core": "^1.2.4",
     "@strudel/webaudio": "^1.2.4"
   }
