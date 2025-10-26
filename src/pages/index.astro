@@ -1,11 +1,32 @@
 ---
-import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import { ComponentA } from '../components/ComponentA';
+import { ComponentB } from '../components/ComponentB';
 ---
 
-<Layout>
-	<Welcome />
+<Layout title="Strudel Double Load Test">
+  <main>
+    <h1>Qwik + Strudel Double Load Test</h1>
+    <p>Open browser console to check if @strudel/core loads twice</p>
+    
+    <ComponentA client:load />
+    <ComponentB client:load />
+  </main>
 </Layout>
+
+<style>
+  main {
+    margin: auto;
+    padding: 1rem;
+    width: 800px;
+    max-width: calc(100% - 2rem);
+    color: white;
+    font-size: 20px;
+    line-height: 1.6;
+  }
+  h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 0 0 1em 0;
+  }
+</style>
